@@ -39,6 +39,19 @@
 			$(this).attr('placeholder',$(this).data('holder'));
 		});
 	});
+	if ( $('.modal').length > 0 ) {
+		$('.modal').append('<span class="close"></span>');
+		$('[data-open]').bind('click', function() {
+			var target = $('.modal[data-modal="'+$(this).attr('data-open')+'"]');
+			target.css({
+				'top': $(document).scrollTop()+($(window).height()-target.outerHeight())/2+'px'
+			}).stop(true,true).fadeIn(250);
+			$('.fade').stop(true,true).fadeIn(250);
+		});
+		$('.fade, .modal .close').bind('click', function() {
+			$('.fade, .modal').stop(true,true).fadeOut(250);
+		});
+	}
 });
 $(window).load(function() {
 	if ( $('.result > div > div').length > 0 ) {

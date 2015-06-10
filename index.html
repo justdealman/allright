@@ -4,7 +4,7 @@
 	<title>All right</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=1320, user-scalable=yes">
-	<link href="./favicon.ico" rel="shortcut icon">
+	<!--<link href="./favicon.ico" rel="shortcut icon">-->
 	<link href="./css/style.css" rel="stylesheet">
 	<!--[if IE 8]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
@@ -30,7 +30,7 @@
 		</div>
 		<div class="call">
 			<p>Хотите, мы перезвоним Вам через 26 секунд?</p>
-			<button>Перезвонить</button>
+			<button data-open="callback">Перезвонить</button>
 		</div>
 	</header>
 	<nav>
@@ -380,7 +380,7 @@
 							<p>В 2010 году с отличием закончила юридический факультет Алтайского государственного университета. В 2014 году прошла обучение в Западно-Сибирском филиале Российской правовой академии Министерства юстиции РФ по программе подготовки арбитражных управляющих. Работает в компании с 2008 года. Имеет огромный опыт в кредитно-финансовой сфере, вопросах гражданского права, арбитражных спорах, делах о несостоятельности (банкротстве).  Юридическим сопровождением корпоративных клиентов занимается с 2009 года. Проводила юридический аудит более чем в 40 компаниях.</p>
 						</div>
 					</div>
-					<button>Задать вопрос</button>
+					<button data-open="question">Задать вопрос</button>
 				</li>
 				<li>
 					<div class="photo">
@@ -393,7 +393,7 @@
 							<p>Специализируется в кредитных, залоговых вопросах. Имеет богатый опыт в решении вопросов с залоговой недвижимостью и сопровождения долговых обязательств. Профессионально занимался построением систем в бизнесе по профилактике и работе с дебиторской задолженностью.  Долгое время работал в прокуратуре. Имеет наработанные связи в правоохранительных,  контролирующих органах и службе судебных приставов.</p>
 						</div>
 					</div>
-					<button>Задать вопрос</button>
+					<button data-open="question">Задать вопрос</button>
 				</li>
 				<li>
 					<div class="photo">
@@ -406,7 +406,7 @@
 							<p>Закончила в 2014 году Горно-Алтайский государственный универститет с отличием. В настоящее время является магистрантом АлтГУ по направлению гражданское, семейное, международное частное право. Области профессиональной компетенции: представительство интересов заказчика в судах, ведение претензионной и договорной работы с контрагентами, подготовка и анализ юридических документов, досудебное разрешение конфликтных ситуаций, взыскание задолженности в судебном порядке. Обладает глубоким теоретическим и практическим опытом по вопросам государственных закупок и государственных контрактов.</p>
 						</div>
 					</div>
-					<button>Задать вопрос</button>
+					<button data-open="question">Задать вопрос</button>
 				</li>
 				<li>
 					<div class="photo">
@@ -419,7 +419,7 @@
 							<p>Dummy text.</p>
 						</div>
 					</div>
-					<button>Задать вопрос</button>
+					<button data-open="question">Задать вопрос</button>
 				</li>
 				<li>
 					<div class="photo">
@@ -432,7 +432,7 @@
 							<p>Dummy text.</p>
 						</div>
 					</div>
-					<button>Задать вопрос</button>
+					<button data-open="question">Задать вопрос</button>
 				</li>
 				<li>
 					<div class="photo">
@@ -445,7 +445,7 @@
 							<p>Dummy text.</p>
 						</div>
 					</div>
-					<button>Задать вопрос</button>
+					<button data-open="question">Задать вопрос</button>
 				</li>
 				<li>
 					<div class="photo">
@@ -458,7 +458,7 @@
 							<p>Dummy text.</p>
 						</div>
 					</div>
-					<button>Задать вопрос</button>
+					<button data-open="question">Задать вопрос</button>
 				</li>
 			</ul>
 		</div>
@@ -531,6 +531,21 @@
 		</div>
 		<h5 class="author">Разработка сайта - <a href="#"><img src="./img/letsrock_logo.png" width="89" height="22" alt=""></a></h5>
 	</footer>
+	<div class="fade"></div>
+	<div class="modal" data-modal="callback">
+		<h5>Заказать обратный звонок</h5>
+		<p><input type="text" placeholder="Имя"></p>
+		<p><input type="text" placeholder="Телефон"></p>
+		<button>Отправить</button>
+	</div>
+	<div class="modal" data-modal="question">
+		<h5>Задать вопрос</h5>
+		<p><input type="text" placeholder="Имя"></p>
+		<p><input type="text" placeholder="E-mail"></p>
+		<p><input type="text" placeholder="Телефон"></p>
+		<p><textarea cols="80" rows="3" placeholder="Сообщение"></textarea></p>
+		<button>Отправить</button>
+	</div>
 	<script src="./js/jquery.js"></script>
 	<script src="./js/jcarousel.js"></script>
 	<script src="./js/mobile.js"></script>
